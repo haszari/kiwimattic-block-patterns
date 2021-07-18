@@ -12,4 +12,9 @@
  * @package         Kiwimattic_Block_Patterns
  */
 
-// Your code starts here.
+
+defined( 'ABSPATH' ) || exit;
+
+require_once __DIR__ . '/php/class-kiwimattic-block-patterns.php';
+
+new KiwimatticBlockPatterns();
