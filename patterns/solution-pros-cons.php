@@ -1,6 +1,6 @@
 <?php
-$content = file_get_contents('https://v2.jokeapi.dev/joke/Any');
-$json=json_decode($content);
+$content = file_get_contents( 'https://v2.jokeapi.dev/joke/Any' );
+$json=json_decode( $content );
 ?>
 <!-- wp:group -->
 <div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:heading -->
