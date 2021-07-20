@@ -64,6 +64,16 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'unsplash-call-to-action' ),
 			)
 		);
+
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'recipe-block',
+			array(
+				'title'       => __( 'Recipe card block', self::PLUGIN_SLUG ),
+				'description' => _x( 'A full featured recipe card block', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'food' ],
+				'content'     => $this->load_pattern_content( 'recipe-block' ),
+			)
+		);
 	}
 
 	/**
