@@ -65,15 +65,6 @@ final class KiwimatticBlockPatterns {
 			)
 		);
 		register_block_pattern(
-			self::BLOCK_PATTERN_NAMESPACE . 'sketchionary-cv',
-			array(
-				'title'       => __( 'Unsplash call-to-action', self::PLUGIN_SLUG ),
-				'description' => _x( 'Sketchionary is a great meetup activity to participate in no matter your skill level', self::PLUGIN_SLUG ),
-				'categories'  => [ 'kiwimattic', 'buttons' ],
-				'content'     => $this->load_pattern_content( 'sketchionary-cv' ),
-			)
-		);
-		register_block_pattern(
 			self::BLOCK_PATTERN_NAMESPACE . 'wc-products-pattern',
 			array(
 				'title'       => __( 'WC Products Layout', self::PLUGIN_SLUG ),
@@ -100,6 +91,18 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'recipe' ),
 			)
 		);
+
+		if ( WP_Block_Type_Registry::get_instance()->get_registered( 'p2/sketch' ) ) {
+			register_block_pattern(
+				self::BLOCK_PATTERN_NAMESPACE . 'sketchionary-cv',
+				array(
+					'title'       => __( 'Sketchionary CV', self::PLUGIN_SLUG ),
+					'description' => _x( 'Sketchionary is a great meetup activity to participate in no matter your skill level', self::PLUGIN_SLUG ),
+					'categories'  => [ 'kiwimattic', 'buttons' ],
+					'content'     => $this->load_pattern_content( 'sketchionary-cv' ),
+				)
+			);
+		}
 	}
 
 	/**
