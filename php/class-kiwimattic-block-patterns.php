@@ -64,6 +64,15 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'unsplash-call-to-action' ),
 			)
 		);
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'wc-products-pattern',
+			array(
+				'title'       => __( 'WC Products Layout', self::PLUGIN_SLUG ),
+				'description' => _x( 'Awesome product layout with lots of nice features', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic' ],
+				'content'     => $this->load_pattern_content( 'wc-products-pattern' ),
+			)
+		);
 	}
 
 	/**
