@@ -64,6 +64,15 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'unsplash-call-to-action' ),
 			)
 		);
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'get-to-know',
+			array(
+				'title'       => __( 'Get to know an A8C', self::PLUGIN_SLUG ),
+				'description' => _x( 'A template for an A8C introduction', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'buttons' ],
+				'content'     => $this->load_pattern_content( 'get-to-know' ),
+			)
+		);
 	}
 
 	/**
