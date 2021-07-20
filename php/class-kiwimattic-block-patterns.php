@@ -49,6 +49,10 @@ final class KiwimatticBlockPatterns {
 			'kiwimattic',
 			array( 'label' => __( 'Kiwimattic', self::PLUGIN_SLUG ) )
 		);
+		register_block_pattern_category(
+			'ecommerce',
+			array( 'label' => __( 'eCommerce', self::PLUGIN_SLUG ) )
+		);
 	}
 
 	/**
@@ -71,6 +75,32 @@ final class KiwimatticBlockPatterns {
 				'description' => _x( 'A question and answer', self::PLUGIN_SLUG ),
 				'categories'  => [ 'kiwimattic', 'buttons' ],
 				'content'     => $this->load_pattern_content( 'wtf-trivia' ),
+
+			self::BLOCK_PATTERN_NAMESPACE . 'wc-products-pattern',
+			array(
+				'title'       => __( 'WC Products Layout', self::PLUGIN_SLUG ),
+				'description' => _x( 'Awesome product layout with lots of nice features', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic','ecommerce' ],
+				'content'     => $this->load_pattern_content( 'wc-products-pattern' ),
+			)
+		);
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'get-to-know',
+			array(
+				'title'       => __( 'Get to know an A8C', self::PLUGIN_SLUG ),
+				'description' => _x( 'A template for an A8C introduction', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'buttons' ],
+				'content'     => $this->load_pattern_content( 'get-to-know' ),
+			)
+		);
+      
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'recipe',
+			array(
+				'title'       => __( 'Recipe', self::PLUGIN_SLUG ),
+				'description' => _x( 'A delicious recipe, hopefully for a cake', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'buttons', 'recipe', 'cake' ],
+				'content'     => $this->load_pattern_content( 'recipe' ),
 			)
 		);
 	}
