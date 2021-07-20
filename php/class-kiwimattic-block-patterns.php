@@ -73,7 +73,8 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'sketchionary-cv' ),
 			)
 		);
-		self::BLOCK_PATTERN_NAMESPACE . 'wc-products-pattern',
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'wc-products-pattern',
 			array(
 				'title'       => __( 'WC Products Layout', self::PLUGIN_SLUG ),
 				'description' => _x( 'Awesome product layout with lots of nice features', self::PLUGIN_SLUG ),
