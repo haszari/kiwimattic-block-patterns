@@ -1,4 +1,3 @@
-
 <?php
 $content = file_get_contents('https://v2.jokeapi.dev/joke/Any');
 $json=json_decode($content);
