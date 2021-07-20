@@ -49,6 +49,10 @@ final class KiwimatticBlockPatterns {
 			'kiwimattic',
 			array( 'label' => __( 'Kiwimattic', self::PLUGIN_SLUG ) )
 		);
+		register_block_pattern_category(
+			'ecommerce',
+			array( 'label' => __( 'eCommerce', self::PLUGIN_SLUG ) )
+		);
 	}
 
 	/**
@@ -70,7 +74,7 @@ final class KiwimatticBlockPatterns {
 			array(
 				'title'       => __( 'WC Products Layout', self::PLUGIN_SLUG ),
 				'description' => _x( 'Awesome product layout with lots of nice features', self::PLUGIN_SLUG ),
-				'categories'  => [ 'kiwimattic' ],
+				'categories'  => [ 'kiwimattic','ecommerce' ],
 				'content'     => $this->load_pattern_content( 'wc-products-pattern' ),
 			)
 		);
