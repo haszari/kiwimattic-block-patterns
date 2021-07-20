@@ -1,3 +1,21 @@
+<!-- wp:group {"className":"is-style-twentytwentyone-border"} -->
+<div class="wp-block-group is-style-twentytwentyone-border"><!-- wp:heading -->
+<h2>Recipe Title</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>BY <strong>AUTHOR NAME</strong></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:post-date {"textAlign":"right"} /--></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
 <!-- wp:group {"className":"is-style-default"} -->
 <div class="wp-block-group is-style-default"><!-- wp:image {"align":"center","sizeSlug":"large","className":"is-style-rounded"} -->
 <div class="wp-block-image is-style-rounded"><figure class="aligncenter size-large"><img src="https://source.unsplash.com/featured/600x600?cooking" alt=""/></figure></div>
