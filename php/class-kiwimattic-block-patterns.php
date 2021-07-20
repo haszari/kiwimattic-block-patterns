@@ -72,7 +72,8 @@ final class KiwimatticBlockPatterns {
 				'description' => _x( 'Awesome product layout with lots of nice features', self::PLUGIN_SLUG ),
 				'categories'  => [ 'kiwimattic' ],
 				'content'     => $this->load_pattern_content( 'wc-products-pattern' ),
-	);
+			)
+		);
 		register_block_pattern(
 			self::BLOCK_PATTERN_NAMESPACE . 'get-to-know',
 			array(
