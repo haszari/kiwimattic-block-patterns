@@ -74,6 +74,8 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'recipe-block' ),
 			)
 		);
+
+		wp_enqueue_style('recipe-block-styles', plugin_dir_url( __FILE__ ) . '../patterns/recipe-block-styles.css' );
 	}
 
 	/**

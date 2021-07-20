@@ -11,7 +11,7 @@
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column"><!-- wp:post-date {"textAlign":"right"} /--></div>
+<div class="wp-block-column"><!-- wp:post-date {"textAlign":"right", "className": "recipe-block-date"} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
