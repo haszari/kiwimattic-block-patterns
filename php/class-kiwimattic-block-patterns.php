@@ -64,6 +64,15 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'unsplash-call-to-action' ),
 			)
 		);
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'sketchionary-cv',
+			array(
+				'title'       => __( 'Unsplash call-to-action', self::PLUGIN_SLUG ),
+				'description' => _x( 'Sketchionary is a great meetup activity to participate in no matter your skill level', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'buttons' ],
+				'content'     => $this->load_pattern_content( 'sketchionary-cv' ),
+			)
+		);
 	}
 
 	/**
