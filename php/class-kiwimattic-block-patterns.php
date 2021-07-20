@@ -73,6 +73,15 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'get-to-know' ),
 			)
 		);
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'recipe',
+			array(
+				'title'       => __( 'Recipe', self::PLUGIN_SLUG ),
+				'description' => _x( 'A delicious recipe, hopefully for a cake', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'buttons', 'recipe', 'cake' ],
+				'content'     => $this->load_pattern_content( 'recipe' ),
+			)
+		);
 	}
 
 	/**
