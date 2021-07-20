@@ -69,6 +69,14 @@ final class KiwimatticBlockPatterns {
 			)
 		);
 		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'wtf-trivia',
+			array(
+				'title'       => __( 'WTF Trivia', self::PLUGIN_SLUG ),
+				'description' => _x( 'A question and answer', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'buttons' ],
+				'content'     => $this->load_pattern_content( 'wtf-trivia' ),
+	   )
+	 );
 			self::BLOCK_PATTERN_NAMESPACE . 'wc-products-pattern',
 			array(
 				'title'       => __( 'WC Products Layout', self::PLUGIN_SLUG ),
