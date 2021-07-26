@@ -87,8 +87,10 @@ final class KiwimatticBlockPatterns {
 				'description' => _x( 'A question and answer', self::PLUGIN_SLUG ),
 				'categories'  => [ 'kiwimattic', 'buttons' ],
 				'content'     => $this->load_pattern_content( 'wtf-trivia' ),
-	   )
-	 );
+			)
+		);
+
+		register_block_pattern(
 			self::BLOCK_PATTERN_NAMESPACE . 'wc-products-pattern',
 			array(
 				'title'       => __( 'WC Products Layout', self::PLUGIN_SLUG ),
@@ -97,6 +99,7 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'wc-products-pattern' ),
 			)
 		);
+
 		register_block_pattern(
 			self::BLOCK_PATTERN_NAMESPACE . 'get-to-know',
 			array(
@@ -106,6 +109,7 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'get-to-know' ),
 			)
 		);
+
 		register_block_pattern(
 			self::BLOCK_PATTERN_NAMESPACE . 'recipe',
 			array(
@@ -115,6 +119,7 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'recipe' ),
 			)
 		);
+		
 		register_block_pattern(
 			self::BLOCK_PATTERN_NAMESPACE . 'solution-pros-cons',
 			array(
