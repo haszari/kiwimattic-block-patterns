@@ -49,6 +49,10 @@ final class KiwimatticBlockPatterns {
 			'kiwimattic',
 			array( 'label' => __( 'Kiwimattic', self::PLUGIN_SLUG ) )
 		);
+		register_block_pattern_category(
+			'ecommerce',
+			array( 'label' => __( 'eCommerce', self::PLUGIN_SLUG ) )
+		);
 	}
 
 	/**
@@ -64,15 +68,38 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'unsplash-call-to-action' ),
 			)
 		);
+
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'recipe-block',
+			array(
+				'title'       => __( 'Recipe card block', self::PLUGIN_SLUG ),
+				'description' => _x( 'A full featured recipe card block', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'food' ],
+				'content'     => $this->load_pattern_content( 'recipe-block' ),
+			)
+		);
+
+		wp_enqueue_style('recipe-block-styles', plugin_dir_url( __FILE__ ) . '../patterns/recipe-block-styles.css' );
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'wtf-trivia',
+			array(
+				'title'       => __( 'WTF Trivia', self::PLUGIN_SLUG ),
+				'description' => _x( 'A question and answer', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'buttons' ],
+				'content'     => $this->load_pattern_content( 'wtf-trivia' ),
+			)
+		);
+
 		register_block_pattern(
 			self::BLOCK_PATTERN_NAMESPACE . 'wc-products-pattern',
 			array(
 				'title'       => __( 'WC Products Layout', self::PLUGIN_SLUG ),
 				'description' => _x( 'Awesome product layout with lots of nice features', self::PLUGIN_SLUG ),
-				'categories'  => [ 'kiwimattic' ],
+				'categories'  => [ 'kiwimattic','ecommerce' ],
 				'content'     => $this->load_pattern_content( 'wc-products-pattern' ),
 			)
 		);
+
 		register_block_pattern(
 			self::BLOCK_PATTERN_NAMESPACE . 'get-to-know',
 			array(
@@ -81,7 +108,8 @@ final class KiwimatticBlockPatterns {
 				'categories'  => [ 'kiwimattic', 'buttons' ],
 				'content'     => $this->load_pattern_content( 'get-to-know' ),
 			)
-		);   
+		);
+
 		register_block_pattern(
 			self::BLOCK_PATTERN_NAMESPACE . 'recipe',
 			array(
@@ -91,18 +119,16 @@ final class KiwimatticBlockPatterns {
 				'content'     => $this->load_pattern_content( 'recipe' ),
 			)
 		);
-
-		if ( WP_Block_Type_Registry::get_instance()->get_registered( 'p2/sketch' ) ) {
-			register_block_pattern(
-				self::BLOCK_PATTERN_NAMESPACE . 'sketchionary-cv',
-				array(
-					'title'       => __( 'Sketchionary CV', self::PLUGIN_SLUG ),
-					'description' => _x( 'Sketchionary is a great meetup activity to participate in no matter your skill level', self::PLUGIN_SLUG ),
-					'categories'  => [ 'kiwimattic', 'buttons' ],
-					'content'     => $this->load_pattern_content( 'sketchionary-cv' ),
-				)
-			);
-		}
+		
+		register_block_pattern(
+			self::BLOCK_PATTERN_NAMESPACE . 'solution-pros-cons',
+			array(
+				'title'       => __( 'Solution Pros/Cons', self::PLUGIN_SLUG ),
+				'description' => _x( 'Write your solution and list the pros and cons', self::PLUGIN_SLUG ),
+				'categories'  => [ 'kiwimattic', 'buttons' ],
+				'content'     => $this->load_pattern_content( 'solution-pros-cons' ),
+			)
+		);
 	}
 
 	/**
